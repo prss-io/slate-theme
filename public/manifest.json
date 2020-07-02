@@ -1,0 +1,6 @@
+{
+    "title": "Slate",
+    "type": "blog",
+    "parser": "react",
+    "siteVars": []
+}
