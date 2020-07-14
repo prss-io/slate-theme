@@ -66,7 +66,7 @@ const Blog = data => {
                                                 <div className="card d-flex flex-row">
                                                     <a
                                                         className={cx(
-                                                            'card-img-left',
+                                                            'card-img-left d-none d-lg-block',
                                                             {
                                                                 'card-has-img': !!post
                                                                     .vars

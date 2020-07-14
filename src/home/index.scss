@@ -30,4 +30,10 @@
             }
         }
     }
+
+    main .main-container section:nth-child(2n):after {
+        content: '';
+        background: transparent;
+        border-top: 1px solid #f3f3f3;
+    }
 }

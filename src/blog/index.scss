@@ -11,8 +11,8 @@
     // }
 
     .card {
-        border: none;
-        height: 160px;
+        border: 1px solid #eaeaea !important;
+        min-height: 160px;
         border-radius: 0;
         margin-bottom: 20px;
 
@@ -24,6 +24,7 @@
 
     .card-img-left {
         max-width: 250px;
+        min-height: 160px;
 
         img {
             width: 100%;

@@ -40,6 +40,14 @@
 
     main .main-container section {
         margin-top: 0;
+
+        &:nth-child(2n) {
+            padding-top: 30px;
+
+            &:after {
+                display: none;
+            }
+        }
     }
 
     .hero {
@@ -93,9 +101,20 @@
     }
 
     .post-title-container {
-        padding: 40px;
-        background: #f9f9f9;
+        padding: 60px 40px;
         border-radius: 20px;
+        position: relative;
+
+        &:after {
+            content: '';
+            background: #fbfbfb;
+            position: absolute;
+            width: 200vw;
+            height: 100%;
+            left: -100vw;
+            top: 0;
+            z-index: -1;
+        }
     }
 
     .card-img-left {

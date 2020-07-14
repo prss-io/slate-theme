@@ -20,23 +20,8 @@
 
             &.active {
                 a {
-                    padding: 10px 20px;
-                    margin: 0 20px;
                     position: relative;
                     color: black;
-                    /*position: relative;
-                    box-shadow: 0px 0px 6px #00000029;
-                    background: linear-gradient(
-                        -45deg,
-                        #ffa63d,
-                        #ff3d77,
-                        #338aff,
-                        #3cf0c5
-                    );
-                    color: black;
-                    background-size: 600%;
-                    animation: btnanim 20s linear infinite;
-                    transition: opacity 0.3s ease-in-out;*/
 
                     span {
                         color: #737373;
@@ -45,61 +30,26 @@
                     }
 
                     &:after {
+                        transition: bottom 0.3s ease-in-out;
                         content: '';
-                        user-select: none;
-                        //width: 95%;
-                        //height: 89%;
-                        width: 100%;
-                        height: 100%;
                         position: absolute;
-                        top: 0;
-                        left: 0;
-                        //top: 50%;
-                        //left: 50%;
-                        //transform: translateY(-50%) translateX(-50%);
-                        background: white;
-                        border-radius: 20px;
-                    }
-
-                    &:before {
-                        content: '';
-                        background: linear-gradient(
-                            -45deg,
-                            #ffa63d,
-                            #ff3d77,
-                            #338aff,
-                            #3cf0c5
-                        );
-                        color: white;
-                        background-size: 600%;
-                        width: 100%;
-                        height: 100%;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        z-index: -1;
-                        //transform: scale(1.1);
-                        border-radius: 20px;
-                        opacity: 0.3;
-                        filter: blur(8px);
-                        animation: btnanim 15s linear infinite;
+                        height: 5px;
+                        width: 15px;
+                        background-color: #626262;
+                        left: 0px;
+                        right: 0px;
+                        bottom: -5px;
+                        border-radius: 2px;
+                        margin: 0px auto;
                     }
 
                     &:hover {
                         opacity: 0.8;
-                    }
-                }
-            }
 
-            @keyframes btnanim {
-                0% {
-                    background-position: 0% 50%;
-                }
-                50% {
-                    background-position: 100% 50%;
-                }
-                100% {
-                    background-position: 0% 50%;
+                        &:after {
+                            bottom: -2px;
+                        }
+                    }
                 }
             }
 
@@ -113,7 +63,7 @@
         .logo {
             color: black;
             font-size: 25px;
-            font-weight: 300;
+            font-weight: 500;
             max-width: 220px;
 
             img {
@@ -128,15 +78,18 @@
         }
 
         &.sticky-unset {
-            background: #fbfbfbe7;
+            background: #fff;
             backdrop-filter: blur(10px);
             animation: sticky-top-unset 0.5s forwards;
+            transition: box-shadow 0.3s ease-in-out;
+            box-shadow: 0 5px 5px transparent;
         }
 
         &.scrolled {
-            background: #fbfbfbe7;
+            background: #fff;
             backdrop-filter: blur(10px);
             animation: sticky-top-set 0.5s forwards;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.068);
         }
 
         .navbar-light .navbar-toggler {
@@ -164,6 +117,18 @@
                 padding: 18px 20px;
                 z-index: 999999999999999;
                 border-radius: 10px;
+                margin-top: 14px;
+                box-shadow: 0 4px 5px #dedede;
+
+                .nav-item {
+                    &.active {
+                        a {
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
             }
 
             .dropdown-menu {
@@ -182,7 +147,7 @@
 
         @keyframes sticky-top-unset {
             0% {
-                background: #fbfbfbe7;
+                background: #fff;
                 backdrop-filter: blur(10px);
             }
             100% {
