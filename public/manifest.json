@@ -15,18 +15,6 @@
             "type": "image",
             "description": "Path for the post's alt featured image"
         },
-        "heroTitle": {
-            "type": "string",
-            "description": "Hero title for the page"
-        },
-        "heroMessage": {
-            "type": "string",
-            "description": "Message that appears under the hero title"
-        },
-        "heroImageUrl": {
-            "type": "image",
-            "description": "Url for the featured image"
-        },
         "sidebarMenu": {
             "type": "string",
             "description": "Menu to be used in the page's sidebar"

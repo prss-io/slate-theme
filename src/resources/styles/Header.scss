@@ -1,159 +1,128 @@
 .page header.page-header {
-    display: unset;
-    user-select: none;
+  user-select: none;
 
-    .header-nav {
-        height: 80px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: black;
-        width: 100%;
-        top: 20px;
-        transition: 0.3s background ease-in-out;
+  .header-nav {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    width: 100%;
+    top: 20px;
+    transition: 0.3s background ease-in-out;
 
-        .nav-item {
-            a {
-                border-radius: 20px;
-                padding: 10px 15px;
-            }
-
-            &.active {
-                a {
-                    position: relative;
-                    color: black;
-
-                    span {
-                        color: #737373;
-                        position: relative;
-                        z-index: 1;
-                    }
-
-                    &:after {
-                        transition: bottom 0.3s ease-in-out;
-                        content: '';
-                        position: absolute;
-                        height: 5px;
-                        width: 15px;
-                        background-color: #626262;
-                        left: 0px;
-                        right: 0px;
-                        bottom: -5px;
-                        border-radius: 2px;
-                        margin: 0px auto;
-                    }
-
-                    &:hover {
-                        opacity: 0.8;
-
-                        &:after {
-                            bottom: -2px;
-                        }
-                    }
-                }
-            }
-
-            &:last-child {
-                a {
-                    margin-right: 0 !important;
-                }
-            }
-        }
-
-        .logo {
-            color: black;
-            font-size: 25px;
-            font-weight: 500;
-            max-width: 220px;
-
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-        }
-
-        &:not(.scrolled) {
-            z-index: 10;
-            position: relative;
-        }
-
-        &.sticky-unset {
-            background: #fff;
-            backdrop-filter: blur(10px);
-            animation: sticky-top-unset 0.5s forwards;
-            transition: box-shadow 0.3s ease-in-out;
-            box-shadow: 0 5px 5px transparent;
-        }
-
-        &.scrolled {
-            background: #fff;
-            backdrop-filter: blur(10px);
-            animation: sticky-top-set 0.5s forwards;
-            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.068);
-        }
-
-        .navbar-light .navbar-toggler {
-            border: none;
-        }
-
-        .dropdown-menu {
-            left: unset;
-            right: 0;
-        }
-
-        .dropdown:hover .dropdown-menu {
-            display: block;
-            margin: 0;
-        }
-
-        // Medium devices (tablets, less than 992px)
-        @media (max-width: 991.98px) {
-            .navbar-collapse {
-                background: #f7f7f7;
-                position: absolute;
-                top: 100%;
-                width: 100%;
-                right: 0;
-                padding: 18px 20px;
-                z-index: 999999999999999;
-                border-radius: 10px;
-                margin-top: 14px;
-                box-shadow: 0 4px 5px #dedede;
-
-                .nav-item {
-                    &.active {
-                        a {
-                            &:after {
-                                display: none;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .dropdown-menu {
-                margin-bottom: 10px;
-            }
-        }
-
-        @keyframes sticky-top-set {
-            0% {
-                top: -100px;
-            }
-            100% {
-                top: 0;
-            }
-        }
-
-        @keyframes sticky-top-unset {
-            0% {
-                background: #fff;
-                backdrop-filter: blur(10px);
-            }
-            100% {
-                background: transparent;
-                backdrop-filter: blur(0px);
-            }
-        }
+    .navbar {
+      padding: 0;
     }
+
+    .navbar-nav {
+      border-radius: 20px;
+      padding: 0 12px;
+    }
+
+    .navbar-nav,
+    .navbar-toggler {
+      background: #464646;
+    }
+
+    .navbar-toggler {
+      border: none;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (min-width: 992px) {
+      .navbar-expand-lg .navbar-toggler {
+        display: none;
+      }
+    }
+
+    .logo {
+      color: black;
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    &.scrolled {
+      .logo {
+        color: white;
+      }
+    }
+
+    &:not(.scrolled) {
+      z-index: 10;
+    }
+
+    &.sticky-unset {
+      background: #252525c4;
+      backdrop-filter: blur(10px);
+      animation: sticky-top-unset 0.5s forwards;
+    }
+
+    &.scrolled {
+      background: #252525c4;
+      backdrop-filter: blur(10px);
+      animation: sticky-top-set 0.5s forwards;
+      position: fixed;
+      left: 0;
+      padding: 20px;
+      color: white;
+    }
+
+    .navbar-dark .navbar-toggler {
+      border: none;
+    }
+
+    .dropdown-menu {
+      left: unset;
+      right: 0;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin: 0;
+    }
+
+    // Medium devices (tablets, less than 992px)
+    @media (max-width: 991.98px) {
+      .navbar-collapse {
+        background: #464646;
+        position: absolute;
+        top: 110%;
+        width: 100%;
+        right: 0;
+        padding: 0 20px;
+        z-index: 999999999999999;
+        border-radius: 20px;
+      }
+
+      .dropdown-menu {
+        margin-bottom: 10px;
+      }
+    }
+
+    @keyframes sticky-top-set {
+      0% {
+        top: -100px;
+      }
+      100% {
+        top: 0;
+      }
+    }
+
+    @keyframes sticky-top-unset {
+      0% {
+        background: #252525c4;
+        backdrop-filter: blur(10px);
+      }
+      100% {
+        background: transparent;
+        backdrop-filter: blur(0px);
+      }
+    }
+  }
 }
