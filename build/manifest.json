@@ -1,7 +1,7 @@
 {
   "name": "@hodgef/slate-theme",
   "title": "Slate",
-  "version": "2.0.0",
+  "version": "3.0.2",
   "author": "Francisco Hodge",
   "homepage": "https://github.com/prss-io/slate-theme",
   "license": "MIT",
@@ -84,5 +84,6 @@
     "home",
     "page",
     "post"
-  ]
+  ],
+  "isSSR": true
 }

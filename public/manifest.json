@@ -2,6 +2,7 @@
     "title": "Slate",
     "type": "blog",
     "parser": "react",
+    "isSSR": true,
     "siteVars": {
         "logoImageUrl": {
             "type": "image",

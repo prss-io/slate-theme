@@ -4,37 +4,29 @@ body {
   margin: 0;
   padding: 0;
 }
-
 ::selection {
   background: #616161;
   color: white;
 }
-
 .clickable {
   transition: opacity 0.1s ease-in-out;
   cursor: pointer;
-
-  &:hover {
-    opacity: 0.5;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
-
+.clickable:hover {
+  opacity: 0.5;
+}
+.clickable:active {
+  opacity: 0.3;
+}
 .disabled {
   opacity: 0.5;
-
-  &:hover {
-    opacity: 0.5;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
 }
-
+.disabled:hover {
+  opacity: 0.5;
+}
+.disabled:active {
+  opacity: 0.5;
+}
 @media (min-width: 34em) {
   .card-columns {
     -webkit-column-count: 2;
@@ -42,7 +34,6 @@ body {
     column-count: 2;
   }
 }
-
 @media (min-width: 48em) {
   .card-columns {
     -webkit-column-count: 3;
@@ -50,7 +41,6 @@ body {
     column-count: 3;
   }
 }
-
 @media (min-width: 62em) {
   .card-columns {
     -webkit-column-count: 4;
@@ -58,7 +48,6 @@ body {
     column-count: 4;
   }
 }
-
 @media (min-width: 75em) {
   .card-columns {
     -webkit-column-count: 5;
