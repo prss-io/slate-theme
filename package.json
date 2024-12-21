@@ -1,6 +1,6 @@
 {
   "name": "@hodgef/slate-theme",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Slate Theme for PRSS",
   "main": "build/index.js",
   "scripts": {
