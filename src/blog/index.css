@@ -1,6 +1,6 @@
 .page.page-blog .card {
   border: none;
-  height: 160px;
+  height: 180px;
   border-radius: 0;
   margin-bottom: 20px;
 }
@@ -41,7 +41,7 @@
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
   font-size: 80px;
-  color: white;
+  color: #4f4f4f;
   transition: opacity 0.3s ease-in-out;
 }
 

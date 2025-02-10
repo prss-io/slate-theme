@@ -9,9 +9,11 @@
 }
 
 .page.page-home .card-wrapper .card {
+  background-color: #f5f5f5;
   position: relative;
   padding: 12px;
   flex: 1;
+  border: none;
 }
 
 .page.page-home .card-wrapper .card a.card-title {
