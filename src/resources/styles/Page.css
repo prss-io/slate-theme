@@ -15,7 +15,7 @@
   line-height: 1.58;
   color: #4c4c4c;
 }
-.page h4 {
+.page:not(.page-post) h4 {
   font-weight: 600;
 }
 .page h4 a {
