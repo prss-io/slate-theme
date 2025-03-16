@@ -1,8 +1,12 @@
 .page.page-blog .card {
   border: none;
-  height: 180px;
   border-radius: 0;
   margin-bottom: 20px;
+}
+
+.page.page-blog .card-body.col {
+  padding: 20px 35px;
+  overflow: inherit;
 }
 
 .page.page-blog .card:last-child {
@@ -20,6 +24,10 @@
   max-width: 250px;
   border-radius: 20px;
   overflow: hidden;
+}
+
+.page.page-blog .card-img-left + .card-body a.card-title {
+  white-space: normal;
 }
 
 .page.page-blog .card-img-left img {

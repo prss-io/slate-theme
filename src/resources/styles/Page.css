@@ -157,14 +157,14 @@
   border-radius: 20px;
 }
 .page .card a.card-title {
-  display: block;
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 27px;
-  margin: 0 0 16px;
-  padding: 0;
-  font-family: "Work Sans", serif;
   color: black;
+  display: block;
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  padding: 0;
+  line-height: 36px;
 }
 .page .card a.card-image {
   position: relative;
@@ -199,7 +199,6 @@
 }
 .page .card .card-img-left {
   width: 100%;
-  height: 100%;
   background-size: cover;
   display: block;
   background-color: #f5f5f5;
