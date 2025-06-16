@@ -75,7 +75,7 @@
 }
 @media (max-width: 991.98px) {
   .page header.page-header .header-nav .navbar-collapse {
-    background: #464646;
+    background: #000;
     position: absolute;
     top: 110%;
     width: 100%;
