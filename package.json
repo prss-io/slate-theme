@@ -1,6 +1,6 @@
 {
   "name": "@prss/slate-theme",
-  "version": "3.2.6",
+  "version": "3.2.7",
   "description": "Slate Theme for PRSS",
   "main": "build/index.js",
   "scripts": {
